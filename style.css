@@ -139,7 +139,7 @@ body {
 }
 
 .sidebar ul li:hover {
-    color: #3f51b5;
+    color: #7415c7;
     background-color: transparent;
     border-radius: 0;
 }
@@ -147,7 +147,7 @@ body {
 .reports-section ul li {
     justify-content: flex-start;
     gap: 5px;
-    color: #3f51b5;
+    color: #112ed3;
     margin-bottom: 0;
 }
 
@@ -168,15 +168,14 @@ body {
     gap: 5px;
     padding: 4px 0;
     cursor: pointer;
-    color: #3f51b5;
-    font-weight: bold;
+    color: #112ed3;
     font-size: 14px;
     margin-top: 0;
     line-height: 1.2;
 }
 
 .plain-reports-header:hover {
-    color: #11238c;
+    color: #7415c7;
 }
 
 .plain-reports-list-hidden {
