@@ -176,7 +176,7 @@ body {
 }
 
 .plain-reports-header:hover {
-    color: #3f51b5;
+    color: #11238c;
 }
 
 .plain-reports-list-hidden {
@@ -244,6 +244,8 @@ body {
 .sample-row:last-child {
     margin-bottom: 0;
 }
+
+
 
 .sample-row label {
     width: 80px;
