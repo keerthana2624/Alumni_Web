@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Registration Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-item">MSIT</div>
+        <div class="header-item">My IIITH</div>
+        <div class="header-item">Office Notes</div>
+        <div class="header-item">Teaching</div>
+        <div class="header-item">Students</div>
+        <div class="header-item">Academics</div>
+        <div class="header-item">Research Projects</div>
+        <div class="header-item">Accounts</div>
+        <div class="header-item">Engineering</div>
+        <div class="header-item">GDA</div>
+        <div class="header-item">Student Guidance</div>
+        <div class="header-item">Hostel</div>
+        <div class="header-item">Mess</div>
+        <div class="header-item">Fixed Assets</div>
+        <div class="header-item">Projects</div>
+        <div class="header-item">Recruitment</div>
+        <div class="header-item">HR</div>
+        <div class="header-item">Aarogya</div>
+    </div>
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="module-section">
+                <div class="module-header">
+                    <span class="icon">👤</span>
+                    <span>Modules</span>
+                    <span class="arrow">></span>
+                </div>
+                <div class="search-box">
+                    <span class="icon">🔍</span>
+                    <input type="text" placeholder="">
+                </div>
+            </div>
+            <div class="reports-section">
+                <h3>Plum Reports</h3>
+                <ul>
+                    <li><span class="sidebar-arrow">></span> Choose Reports</li>
+                    <li><span class="sidebar-arrow">></span> Chart</li>
+                </ul>
+            </div>
+            <div class="plain-reports-section">
+                <div class="plain-reports-header" onclick="togglePlainReports()">
+                    <span class="sidebar-arrow">></span> Plain Reports
+                </div>
+                <ul id="plainReportsList" class="plain-reports-list-hidden">
+                    <li>1.Admissions in IIITH good decision <span class="edit-icon">✎</span></li>
+                    <li>2.All Years students detail <span class="edit-icon">✎</span></li>
+                    <li>3.Alumni Registration Details <span class="edit-icon">✎</span></li>
+                    <li>4.Allocated Rooms Lists <span class="edit-icon">✎</span></li>
+                    <li>5.Approved student leaves <span class="edit-icon">✎</span></li>
+                    <li>6.Attendance Dates-Course Wise <span class="edit-icon">✎</span></li>
+                    <li>7.Category Wise Students  <span class="edit-icon">✎</span></li>
+                    <li>8.Change Advisor status Reports <span class="edit-icon">✎</span></li>
+                    <li>9.Circulation of Books <span class="edit-icon">✎</span></li>
+                    <li>10.Biometric Attendance(students) <span class="edit-icon">✎</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-area">
+            <h2>Alumni Registration Details</h2>
+            <div class="sample-inputs">
+                <div class="sample-row">
+                    <label>Sample1</label>
+                    <div class="input-with-arrow">
+                        <input type="text">
+                        <span class="arrow">></span>
+                    </div>
+                </div>
+                <div class="sample-row">
+                    <label>Sample2</label>
+                    <div class="input-with-arrow">
+                        <input type="text">
+                        <span class="arrow">></span>
+                    </div>
+                </div>
+            </div>
+            <div class="report-buttons">
+                <button>PDF</button>
+                <button>Excel</button>
+                <button>Print Report</button>
+            </div>
+            <div class="alumni-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sl.No</th>
+                            <th>Roll Number</th>
+                            <th>Name</th>
+                            <th>Degree</th>
+                            <th>Type</th>
+                            <th>Email</th>
+                            <th class="action-column"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2023501058</td>
+                            <td>K.Keerthana</td>
+                            <td>Ph.D</td>
+                            <td>Part Time</td>
+                            <td>keerthikeerthana@gmail.com</td>
+                            <td class="action-column"><span class="delete-icon">□</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2023501053</td>
+                            <td>R.Kavya Sri</td>
+                            <td>M.Tech</td>
+                            <td>Full Time</td>
+                            <td>kavyaramagiri@gmail.com</td>
+                            <td class="action-column"><span class="delete-icon">□</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2023501057</td>
+                            <td>V.Sriram</td>
+                            <td>B.Tech</td>
+                            <td>Full Time</td>
+                            <td>sriramvarma@gmail.com</td>
+                            <td class="action-column"><span class="delete-icon">□</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2023501053</td>
+                            <td>K.Krishna</td>
+                            <td>B.Tech</td>
+                            <td>Part Time</td>
+                            <td>krishnaprasad@gmail.com</td>
+                            <td class="action-column"><span class="delete-icon">□</span></td>
+                        </tr>
+                         <tr>
+                            <td>5</td>
+                            <td>2023501062</td>
+                            <td>P.Rakesh</td>
+                            <td>Ph.D</td>
+                            <td>Part Time</td>
+                            <td>rakeshpodishetti@gmail.com</td>
+                            <td class="action-column"><span class="delete-icon">□</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2023501078</td>
+                            <td>K.Sushmitha</td>
+                            <td>M.Tech</td>
+                            <td>Part Time</td>
+                            <td>Sushmitha@gmail.com</td>
+                            <td class="action-column"><span class="delete-icon">□</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePlainReports() {
+            const list = document.getElementById('plainReportsList');
+            if (list.classList.contains('plain-reports-list-hidden')) {
+                list.classList.remove('plain-reports-list-hidden');
+                list.classList.add('plain-reports-list-visible');
+            } else {
+                list.classList.remove('plain-reports-list-visible');
+                list.classList.add('plain-reports-list-hidden');
+            }
+        }
+    </script>
+</body>
+</html> 

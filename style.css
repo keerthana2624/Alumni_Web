@@ -1,0 +1,374 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    gap: 25px;
+}
+
+.header-item {
+    padding: 5px 0;
+    cursor: pointer;
+    transition: none;
+}
+
+.header-item:hover {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.main-content {
+    display: flex;
+    min-height: calc(100vh - 50px);
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #e6e6fa;
+    padding: 20px 0;
+    border-right: 1px solid #ccc;
+    box-shadow: none;
+    flex-shrink: 0;
+}
+
+.module-section,
+.reports-section,
+.plain-reports-section {
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.reports-section {
+    margin-bottom: 0px;
+    padding: 0 20px;
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.module-header .icon {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #673ab7;
+}
+
+.module-header .arrow {
+    margin-left: auto;
+    font-size: 18px;
+    color: #777;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: none;
+}
+
+.search-box .icon {
+    color: #777;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.sidebar h3 {
+    color: #3f51b5;
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding-left: 0;
+    font-size: 16px;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 4px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 14px;
+    transition: none;
+    line-height: 1.2;
+}
+
+.sidebar ul li:hover {
+    color: #7415c7;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.reports-section ul li {
+    justify-content: flex-start;
+    gap: 5px;
+    color: #112ed3;
+    margin-bottom: 0;
+}
+
+.reports-section ul {
+    margin-bottom: 0 !important;
+}
+
+.sidebar-arrow {
+    font-weight: bold;
+    color: #777;
+    font-size: 16px;
+    min-width: unset;
+}
+
+.plain-reports-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 0;
+    cursor: pointer;
+    color: #112ed3;
+    font-size: 14px;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.plain-reports-header:hover {
+    color: #7415c7;
+}
+
+.plain-reports-list-hidden {
+    display: none;
+}
+
+.plain-reports-list-visible {
+    display: block;
+}
+
+.plain-reports-section ul {
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.plain-reports-section ul li {
+    justify-content: space-between;
+    gap: 5px;
+    color: #555;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+.plain-reports-section .edit-icon {
+    color: #3f51b5;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.content-area {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.content-area h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.sample-inputs {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sample-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sample-row:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.sample-row label {
+    width: 80px;
+    margin-right: 10px;
+    font-weight: normal;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.input-with-arrow {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    box-shadow: none;
+}
+
+.input-with-arrow input[type="text"] {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.input-with-arrow .arrow {
+    background-color: #e0e0e0;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-left: 1px solid #ddd;
+    color: #555;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: none;
+}
+
+.input-with-arrow .arrow:hover {
+    background-color: #d0d0d0;
+}
+
+.report-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.report-buttons button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    min-width: unset;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-buttons button:hover {
+    background-color: #d0d0d0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.alumni-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alumni-table th,
+.alumni-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.alumni-table th {
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+    text-transform: unset;
+    letter-spacing: unset;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.alumni-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.alumni-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-column {
+    width: 40px;
+    text-align: center;
+}
+
+.delete-icon {
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    transition: none;
+}
+
+.delete-icon:hover {
+    color: #555;
+}
+
+.plain-reports-section {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    margin-top: 0 !important;
+} 
