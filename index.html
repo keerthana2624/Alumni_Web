@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="content-area">
-            <h2>Alumni Registration Details</h2>
+            <h2 class="alumni-registration-details">Alumni Registration Details</h2>
             <div class="sample-inputs">
                 <div class="sample-row">
                     <label>Sample1</label>
@@ -101,67 +101,14 @@
                             <th class="action-column"></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2023501058</td>
-                            <td>K.Keerthana</td>
-                            <td>Ph.D</td>
-                            <td>Part Time</td>
-                            <td>keerthikeerthana@gmail.com</td>
-                            <td class="action-column"><span class="delete-icon">□</span></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2023501053</td>
-                            <td>R.Kavya Sri</td>
-                            <td>M.Tech</td>
-                            <td>Full Time</td>
-                            <td>kavyaramagiri@gmail.com</td>
-                            <td class="action-column"><span class="delete-icon">□</span></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>2023501057</td>
-                            <td>V.Sriram</td>
-                            <td>B.Tech</td>
-                            <td>Full Time</td>
-                            <td>sriramvarma@gmail.com</td>
-                            <td class="action-column"><span class="delete-icon">□</span></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>2023501053</td>
-                            <td>K.Krishna</td>
-                            <td>B.Tech</td>
-                            <td>Part Time</td>
-                            <td>krishnaprasad@gmail.com</td>
-                            <td class="action-column"><span class="delete-icon">□</span></td>
-                        </tr>
-                         <tr>
-                            <td>5</td>
-                            <td>2023501062</td>
-                            <td>P.Rakesh</td>
-                            <td>Ph.D</td>
-                            <td>Part Time</td>
-                            <td>rakeshpodishetti@gmail.com</td>
-                            <td class="action-column"><span class="delete-icon">□</span></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>2023501078</td>
-                            <td>K.Sushmitha</td>
-                            <td>M.Tech</td>
-                            <td>Part Time</td>
-                            <td>Sushmitha@gmail.com</td>
-                            <td class="action-column"><span class="delete-icon">□</span></td>
-                        </tr>
-
+                    <tbody id="alumniTableBody">
+                        <!-- Table rows will be populated dynamically from JavaScript -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <script src="alumni-data.js"></script>
     <script>
         function togglePlainReports() {
             const list = document.getElementById('plainReportsList');
@@ -173,6 +120,28 @@
                 list.classList.add('plain-reports-list-hidden');
             }
         }
+
+        // Function to populate the table with alumni data
+        function populateAlumniTable() {
+            const tableBody = document.getElementById('alumniTableBody');
+            
+            alumniData.forEach(alumni => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${alumni.slNo}</td>
+                    <td>${alumni.rollNumber}</td>
+                    <td>${alumni.name}</td>
+                    <td>${alumni.degree}</td>
+                    <td>${alumni.type}</td>
+                    <td>${alumni.email}</td>
+                    <td class="action-column"><span class="delete-icon">□</span></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Populate table when page loads
+        document.addEventListener('DOMContentLoaded', populateAlumniTable);
     </script>
 </body>
 </html> 
