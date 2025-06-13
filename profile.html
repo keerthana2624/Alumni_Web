@@ -41,7 +41,7 @@
           </select>
         </div>
         <nav class="activity-menu">
-          <a href="#" class="active" data-menu="personal"><i class="fas fa-user"></i> Personal</a>
+          <a href="#" data-menu="personal"><i class="fas fa-user"></i> Personal</a>
           <a href="#" data-menu="general"><i class="fas fa-globe"></i> General</a>
           <a href="#" data-menu="applications"><i class="fas fa-file-alt"></i> Applications</a>
           <a href="#" data-menu="approvals"><i class="fas fa-check-circle"></i> Approvals</a>
@@ -53,7 +53,7 @@
           <i class="fas fa-search"></i>
           <input type="text" placeholder="Search Activities....">
         </div>
-        <div id="activities-personal" class="activity-list-card">
+        <div id="activities-personal" class="activity-list-card" style="display:none;">
           <div class="activity-item"><i class="fas fa-chevron-right"></i> Guest Room Request</div>
           <div class="activity-item"><i class="fas fa-chevron-right"></i> Faculty Leave Request</div>
           <div class="activity-item"><i class="fas fa-chevron-right"></i> Faculty Tour Approval</div>
@@ -63,18 +63,26 @@
         <div id="activities-general" class="activity-list-card" style="display:none;">
           <div class="activity-item"><i class="fas fa-chevron-right"></i> General Notice 1</div>
           <div class="activity-item"><i class="fas fa-chevron-right"></i> General Notice 2</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> General Notice 3</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> General Notice 4</div>
         </div>
         <div id="activities-applications" class="activity-list-card" style="display:none;">
-          <div class="activity-item"><i class="fas fa-chevron-right"></i> Application A</div>
-          <div class="activity-item"><i class="fas fa-chevron-right"></i> Application B</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Application 1</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Application 2</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Application 3</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Application 4</div>
         </div>
         <div id="activities-approvals" class="activity-list-card" style="display:none;">
-          <div class="activity-item"><i class="fas fa-chevron-right"></i> Approval X</div>
-          <div class="activity-item"><i class="fas fa-chevron-right"></i> Approval Y</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Approval 1</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Approval 2</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Approval 3</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Approval 4</div>
         </div>
         <div id="activities-projects" class="activity-list-card" style="display:none;">
-          <div class="activity-item"><i class="fas fa-chevron-right"></i> Project Alpha</div>
-          <div class="activity-item"><i class="fas fa-chevron-right"></i> Project Beta</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Project Alpha 1</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Project Beta 2</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Project Beta 3</div>
+          <div class="activity-item"><i class="fas fa-chevron-right"></i> Project Beta 4</div>
         </div>
       </div>
     </div>
@@ -91,13 +99,8 @@
       });
     });
     window.addEventListener('DOMContentLoaded', function() {
-      const active = document.querySelector('.activity-menu a.active');
-      if (active) {
-        const menu = active.getAttribute('data-menu');
-        document.querySelectorAll('.activity-list-card').forEach(card => card.style.display = 'none');
-        const target = document.getElementById('activities-' + menu);
-        if (target) target.style.display = '';
-      }
+      document.querySelectorAll('.activity-menu a').forEach(l => l.classList.remove('active'));
+      document.querySelectorAll('.activity-list-card').forEach(card => card.style.display = 'none');
     });
   </script>
 </body>
